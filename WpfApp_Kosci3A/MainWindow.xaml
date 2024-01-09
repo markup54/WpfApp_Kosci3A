@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:WpfApp_Kosci3A"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <UniformGrid Rows="2" Margin="20">
+            <Image x:Name="zdj1" Source="pusta.png"
+                   Height="150"/>
+            <Image x:Name="zdj2" Source="pusta.png"
+                   Height="150"/>
+            <Image x:Name="zdj3" Source="pusta.png"
+                   Height="150"/>
+            <Image x:Name="zdj4" Source="pusta.png"
+                   Height="150"/>
+            <Image x:Name="zdj5" Source="pusta.png"
+                   Height="150"/>
+        </UniformGrid>
+        <Button Click="Button_Rzut_Click">Rzut</Button>
+    </StackPanel>
 </Window>
