@@ -6,19 +6,39 @@
         xmlns:local="clr-namespace:WpfApp_Kosci3A"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
+
+    <UniformGrid Columns="2">
+        
+  <StackPanel>
         <UniformGrid Rows="2" Margin="20">
+            <Button Click="Button_Blokuj_Click">
             <Image x:Name="zdj1" Source="pusta.png"
                    Height="150"/>
+            </Button>
+            <Button Click="Button_Blokuj_Click">
             <Image x:Name="zdj2" Source="pusta.png"
                    Height="150"/>
-            <Image x:Name="zdj3" Source="pusta.png"
+            </Button>
+            <Button Click="Button_Blokuj_Click">
+                <Image x:Name="zdj3" Source="pusta.png"
                    Height="150"/>
-            <Image x:Name="zdj4" Source="pusta.png"
+            </Button>
+            <Button Click="Button_Blokuj_Click">
+                <Image x:Name="zdj4" Source="pusta.png"
                    Height="150"/>
-            <Image x:Name="zdj5" Source="pusta.png"
+            </Button>
+            <Button Click="Button_Blokuj_Click">
+                <Image x:Name="zdj5" Source="pusta.png"
                    Height="150"/>
+            </Button>
         </UniformGrid>
         <Button Click="Button_Rzut_Click">Rzut</Button>
     </StackPanel>
+        <GroupBox Header="Punkty">
+            <StackPanel>
+                <CheckBox>Para</CheckBox>
+                <CheckBox>Dwie pary</CheckBox>
+            </StackPanel>
+        </GroupBox>
+    </UniformGrid>
 </Window>

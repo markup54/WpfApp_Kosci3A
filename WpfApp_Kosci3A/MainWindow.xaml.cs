@@ -54,6 +54,50 @@ namespace WpfApp_Kosci3A
                 Kosci[i].RzucKoscia();
                 imagesKosci[i].Source = Kosci[i].BitmapImage;
             }
+            MessageBox.Show(sumaOczek().ToString());
+            
+        }
+        private int sumaOczek()
+        {
+            int s = 0;
+            foreach(Kosc kosc in Kosci)
+            {
+                s = s + kosc.Wartosc;
+            }
+            return s;
+        }
+
+        /*
+         * 
+         * Obliczenia
+         * suma wszystkich oczek szansa
+         * para 1 2 2 6 6 -> 12(suma oczek największej pary)
+         * 2 pary
+         * trójka
+         * kareta (4 takie same)
+         * poker (5 takich samych)
+         * mały streat 1 2 3 4 5
+         * duży streat 2 3 4 5 6
+         * full (trójka i para)
+         * 
+         */
+
+        private void Button_Blokuj_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Opacity = 0.5;
+            Image image = button.Content as Image;
+            int indeks = imagesKosci.IndexOf(image);
+            if(Kosci[indeks].Zablokowana == true)
+            {
+                Kosci[indeks].Zablokowana = false;
+                button.Opacity = 1;
+            }
+            else
+            {
+                Kosci[indeks].Zablokowana = true;
+                button.Opacity = 0.5;
+            }
             
         }
     }
